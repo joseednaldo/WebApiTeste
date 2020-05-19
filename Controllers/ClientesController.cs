@@ -24,6 +24,7 @@ namespace WebApiTeste.Controllers
             us.Email = "joseednaldo@gmail.com";
             us.testeA = true;
             return us;
+
         }
     }
 }
