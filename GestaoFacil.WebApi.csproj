@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\HomeController1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="VehiculoSustitucionRCI.Dados">
+      <HintPath>..\..\..\..\..\rci\VehiculoSustitucionRCI.Dados\bin\Debug\netcoreapp3.1\VehiculoSustitucionRCI.Dados.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+</Project>

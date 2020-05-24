@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using VehiculoSustitucionRCI.Dados;
+using WebApiTeste.Models;
 
 namespace WebApiTeste.Controllers
 {
@@ -16,15 +17,10 @@ namespace WebApiTeste.Controllers
         [HttpGet]
         [Route("lista")]
         [Route("")]
-        public Usuario Index()
+        public List<Cliente> Index()
         {
-            Usuario us = new Usuario();
-            us.Id = 10;
-            us.Nome = "jose ednaldo";
-            us.Email = "joseednaldo@gmail.com";
-            us.testeA = true;
-            return us;
-
+            Cliente cliente = new Cliente();
+            return cliente.Todos();
         }
 
     }
