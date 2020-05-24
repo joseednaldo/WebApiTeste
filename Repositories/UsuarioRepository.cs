@@ -21,7 +21,7 @@ namespace WebApiTeste.Repositories
             _contexto.SaveChanges();
         }
 
-        public Usuario Find(long id)
+        public Usuario Find(int id)
         {
             return _contexto.Usuarios.Find(id);
         }
@@ -31,7 +31,7 @@ namespace WebApiTeste.Repositories
             return _contexto.Usuarios.ToList();
         }
 
-        public void Remove(long id)
+        public void Remove(int id)
         {
             var usuario = _contexto.Usuarios.First(u => u.UsuarioId == id);
             _contexto.Usuarios.Remove(usuario);

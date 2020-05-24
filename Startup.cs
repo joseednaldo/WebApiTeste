@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using WebApiTeste.Models;
+using WebApiTeste.Repositories;
 
 namespace WebApiTeste
 {
@@ -27,7 +28,10 @@ namespace WebApiTeste
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DBContexto>(options => options.UseSqlServer(Configuration.GetConnectionString("Base")));
+            //services.AddDbContext<DBContexto>(options => options.UseSqlServer(Configuration.GetConnectionString("Base")));
+            services.AddDbContext<DBContexto>(options => options.UseSqlServer(Util.GetConnectionString("base")));
+            //registrar o meu serviço do repositorio
+            services.AddTransient<IUsuarioRepository, UsuarioRepository>();
             services.AddControllers();
         }
 

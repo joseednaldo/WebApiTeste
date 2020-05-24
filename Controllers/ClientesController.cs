@@ -9,7 +9,6 @@ using WebApiTeste.Models;
 
 namespace WebApiTeste.Controllers
 {
-
     [Route("clientes")]
     [ApiController]
     public class ClientesController : ControllerBase
@@ -17,10 +16,10 @@ namespace WebApiTeste.Controllers
         [HttpGet]
         [Route("lista")]
         [Route("")]
-        public List<Cliente> Index()
+        public void  Index()
         {
-            Cliente cliente = new Cliente();
-            return cliente.Todos();
+            //Cliente cliente = new Cliente();
+            //return cliente.Todos();
         }
 
     }

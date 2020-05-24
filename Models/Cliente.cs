@@ -10,23 +10,23 @@ namespace WebApiTeste.Models
     [Table("Clientes")]
     public class Cliente
     {
-        private static DBContexto db  = new DBContexto();
-        public Cliente()
-        {
-           
-        }
+        //private static DBContexto db  = new DBContexto();
+        //public Cliente()
+        //{
 
-        public Cliente Salva()
-        {
-            db.Clientes.Add(this);
-            db.SaveChanges();
-            return this;
-        }
+        //}
 
-        public List<Cliente> Todos()
-        {
-            return db.Clientes.ToList();
-        }
+        //public Cliente Salva()
+        //{
+        //    db.Clientes.Add(this);
+        //    db.SaveChanges();
+        //    return this;
+        //}
+
+        //public List<Cliente> Todos()
+        //{
+        //    return db.Clientes.ToList();
+        //}
 
 
         public int ClienteId { get; set; }

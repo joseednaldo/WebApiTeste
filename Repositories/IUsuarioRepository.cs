@@ -10,8 +10,8 @@ namespace WebApiTeste.Repositories
     {
         void Add(Usuario user);
         IEnumerable<Usuario> GetAll();
-        Usuario Find(long id);
-        void Remove(long id);
+        Usuario Find(int id);
+        void Remove(int id);
         void Update(Usuario user);
     }
 }
