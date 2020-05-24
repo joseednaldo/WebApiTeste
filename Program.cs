@@ -21,6 +21,7 @@ namespace WebApiTeste
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                   // webBuilder.UseIISIntegration();
                 });
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using VehiculoSustitucionRCI.Dados;
 using WebApiTeste.Models;
 using WebApiTeste.Repositories;
 
@@ -53,6 +55,11 @@ namespace WebApiTeste
             {
                 endpoints.MapControllers();
             });
+
+            //app.Run(async (Context) =>
+            //{
+            //    await Context.Response.WriteAsync("teste");
+            //});
         }
     }
 }
